@@ -1,0 +1,33 @@
+.section1 {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section1 > div, .section1 > input  {
+    margin-bottom: 10px;
+} 
+button {
+    margin-bottom: 20px;
+}
+input, button {
+    height: 50px;
+}
+.buttonBox {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.buttonBox > div {
+    text-decoration: none;
+    color: black;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+.buttonBox > div:hover {
+    background-color: aquamarine;
+}
