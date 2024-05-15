@@ -19,7 +19,9 @@ var firebaseConfig = {
   const db = firebase.firestore();
   db.collection('product10').doc('link').get().then((결과)=>{
     a1 = 결과.data().link
+    a2 = 결과.data().count
     console.log(a1)
+    counter.textContent = a2
     nkb.textContent = a1
   })
 

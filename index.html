@@ -31,11 +31,19 @@ var firebaseConfig = {
     };
     firebase.initializeApp(firebaseConfig);
   
-  const db = firebase.firestore();
-   db.collection('product10').doc('link').get().then((결과)=>{
+    const db = firebase.firestore();
+  db.collection('product10').doc('link').get().then((결과)=>{
+    a2 = String(Number(결과.data().count) + 1)
+    db.collection('product10').doc('link').update({"count" : a2})  
     a1 = 결과.data().link
-    location.href = a1
-  })
+    time()
+  });
+
+  const time = () => {
+    setTimeout(function() {
+      location.href = a1;
+    }, 1500);
+  } 
     
   </script>
 </body>
